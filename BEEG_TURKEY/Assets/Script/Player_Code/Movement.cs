@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private float speed;
     [SerializeField] private Camera _cam;
+    [SerializeField] private GameObject AREA;
     private float _camSizeX;
     private float _camSizeY;
 
@@ -20,6 +21,12 @@ public class Movement : MonoBehaviour
         player.playerName = "Jam";
         player.playerSpeedX = speed;
         player.playerSpeedY = speed;
+    }
+
+    private void checkArea(Vector3 playerPosition)
+    {
+        bool isOverlapping = this.AREA.transform.GetChild(0).GetComponent<BoxCollider2D>().OverlapPoint(playerPosition);
+        Debug.Log(isOverlapping);
     }
 
     void Update()
@@ -54,5 +61,7 @@ public class Movement : MonoBehaviour
             position.y = _camSizeY;
         }
         player.transform.position = position;
+
+        checkArea(player.transform.position);
     }
 }

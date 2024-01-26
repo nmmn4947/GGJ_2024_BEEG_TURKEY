@@ -29,6 +29,26 @@ public class GameManager : MonoBehaviour
         {
             GameTimeToClock();
             gameTime = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 
