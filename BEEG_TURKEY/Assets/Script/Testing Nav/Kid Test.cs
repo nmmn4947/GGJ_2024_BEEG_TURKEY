@@ -5,20 +5,54 @@ using UnityEngine.AI;
 
 public class KidTest : MonoBehaviour
 {
-    [SerializeField] Transform Target;
-
+    [SerializeField] Transform target;
+    [SerializeField] float minDelay = 1f;
+    [SerializeField] float maxDelay = 3f;
     NavMeshAgent agent;
 
-    private void Start()
+    void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        // Start the movement when the script begins
+        StartCoroutine(MoveWithRandomDelay());
     }
 
-    private void Update()
+    IEnumerator MoveWithRandomDelay()
     {
-            agent.SetDestination(Target.position);
+        while (true)
+        {
+            MoveToRandomPosition();
+            yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
+        }
     }
 
+    void MoveToRandomPosition()
+    {
+        // Generate a random point within the navmesh bounds
+        Vector2 randomPosition = RandomNavmeshPosition();
+
+        // Set the random position as the destination
+        agent.SetDestination(randomPosition);
+    }
+
+    Vector2 RandomNavmeshPosition()
+    {
+        // Convert the position to Vector2
+        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+
+        // Initialize the variables to store the random position and the NavMeshHit
+        Vector2 randomPosition = Vector2.zero;
+        NavMeshHit hit;
+
+        // Try to find a random point within the navmesh bounds
+        if (NavMesh.SamplePosition(currentPosition + Random.insideUnitCircle * 10.0f, out hit, 10.0f, NavMesh.AllAreas))
+        {
+            randomPosition = hit.position;
+        }
+
+        return randomPosition;
+    }
 }
