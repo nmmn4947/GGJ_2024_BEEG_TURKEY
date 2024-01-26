@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Navigation;
 
@@ -7,6 +8,7 @@ public class Random_kid_want : MonoBehaviour
 {
     public enum KidWant
     {
+        nothing,
         shaker, //กุ้งกิ้ง
         doll,
         car,
@@ -18,7 +20,7 @@ public class Random_kid_want : MonoBehaviour
     int rand1;
     int rand2;
 
-    KidWant _want;
+    public KidWant _want;
 
     public void RandWant()
     {
@@ -60,4 +62,15 @@ public class Random_kid_want : MonoBehaviour
     }
 
     public KidWant getWant() { return _want; }
+
+    public float getRandTime(float min, float max)
+    {
+        return Random.Range(min, max);
+    }
+
+    public void setWant(KidWant state)
+    {
+        _want = state;
+    }
+
 }

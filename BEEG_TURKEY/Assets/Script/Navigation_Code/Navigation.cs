@@ -34,8 +34,6 @@ public class Navigation : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("one " + stop_keep);
-        Debug.Log("two " + stop_keep2);
         if (stop_keep <= 0)
         {
             _state = KidState.Idle;
