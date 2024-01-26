@@ -20,7 +20,7 @@ public class Random_kid_want : MonoBehaviour
 
     KidWant _want;
 
-    private void Update()
+    public void RandWant()
     {
         rand1 = Random.Range(1, 100);
         rand2 = Random.Range(1, 90);
