@@ -12,9 +12,10 @@ public class Navigation : MonoBehaviour
     [SerializeField] float maxY;
 
     Vector2 wayPoint;
-
-    [SerializeField] private float pause_game;
-    private float pause_keep;
+    [SerializeField] private float walk_time;
+    [SerializeField] private float stop_time;
+    private float stop_keep;
+    private float stop_keep2;
 
     public enum KidState
     {
@@ -27,18 +28,34 @@ public class Navigation : MonoBehaviour
     void Start()
     {
         SetNewDestination();
+        stop_keep = walk_time;
+        stop_keep2 = stop_time;
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, wayPoint, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayPoint) < range)
+        Debug.Log("one " + stop_keep);
+        Debug.Log("two " + stop_keep2);
+        if (stop_keep <= 0)
         {
-            SetNewDestination();
+            _state = KidState.Idle;
+            stop_keep2 -= Time.deltaTime;
+            if (stop_keep2 <= 0)
+            {
+                stop_keep = walk_time;
+            }
         }
-        _state = KidState.Walking;
-
-        _state = KidState.Idle;
+        else
+        {
+            stop_keep -= Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, wayPoint, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, wayPoint) < range)
+            {
+                SetNewDestination();
+            }
+            _state = KidState.Walking;
+            stop_keep2 = stop_time;
+        }
 
         Debug.DrawLine(new Vector2(maxY, maxX), new Vector2(minY, minX), Color.red);
     }
