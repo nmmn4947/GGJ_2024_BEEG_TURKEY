@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Main_walkingdown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffcbd965bd844c4ca3d732102e0c450
+      internalID: 1744605174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_walkingdown_1
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1648a1b674dd1349a58cdf7b705700b
+      internalID: -15793602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_walkingdown_2
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab084aa7471aba4294c549947acb95b
+      internalID: -532979040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_walkingdown_3
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a2dad69dba3534bb3907f4ae0d5276
+      internalID: 1542433011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Main_walkingdown_0: 1744605174
+      Main_walkingdown_1: -15793602
+      Main_walkingdown_2: -532979040
+      Main_walkingdown_3: 1542433011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

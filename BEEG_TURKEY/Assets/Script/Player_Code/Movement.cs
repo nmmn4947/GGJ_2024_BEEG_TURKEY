@@ -6,10 +6,12 @@ using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private AudioClip footstepSFX;
     [SerializeField] private float speed;
     [SerializeField] private Camera _cam;
     [SerializeField] private GameObject AREA;
     private Rigidbody2D rigidbody;
+    private AudioSource footStepAudioSource;
     private float _camSizeX;
     private float _camSizeY;
     private Animator animator;
@@ -18,6 +20,7 @@ public class Movement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        footStepAudioSource = GetComponentInChildren<AudioSource>();
         Debug.Log(_cam.orthographicSize);
         _camSizeY = _cam.orthographicSize - 0.5f;
         _camSizeX = _cam.orthographicSize + 3.38f;
@@ -32,8 +35,16 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // ตรวจสอบการกดปุ่ม W A S D
-        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
+        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rigidbody.velocity = playerInput.normalized * speed;
+        if(rigidbody.velocity.magnitude > 0.2f)
+        {
+            footStepAudioSource.enabled = true;
+        }
+        else
+        {
+            footStepAudioSource.enabled = false;
+        }
         animator.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
         animator.SetFloat("Turn", Input.GetAxisRaw("Horizontal"));
         animator.SetFloat("Velocity", rigidbody.velocity.magnitude);
