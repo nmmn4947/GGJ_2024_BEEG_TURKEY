@@ -12,10 +12,12 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rigidbody;
     private float _camSizeX;
     private float _camSizeY;
+    private Animator animator;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
         Debug.Log(_cam.orthographicSize);
         _camSizeY = _cam.orthographicSize - 0.5f;
         _camSizeX = _cam.orthographicSize + 3.38f;
@@ -31,7 +33,11 @@ public class Movement : MonoBehaviour
     {
         // ตรวจสอบการกดปุ่ม W A S D
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
-        rigidbody.velocity = playerInput;
+        rigidbody.velocity = playerInput.normalized * speed;
+        animator.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
+        animator.SetFloat("Turn", Input.GetAxisRaw("Horizontal"));
+        animator.SetFloat("Velocity", rigidbody.velocity.magnitude);
+
 
         /*float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");

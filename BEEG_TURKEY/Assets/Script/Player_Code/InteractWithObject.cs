@@ -15,12 +15,10 @@ public class InteractWithObject : MonoBehaviour
     void Update()
     {
         Collider2D interactRadius = Physics2D.OverlapCircle(transform.position, interactRange, LayerMask.GetMask("Interactable"));
-        Debug.Log(interactRadius);
         if (interactRadius != null)
 
         if (interactRadius.TryGetComponent<Interactable>(out Interactable item) && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("EE");
             item.Interact();
         }
     }
