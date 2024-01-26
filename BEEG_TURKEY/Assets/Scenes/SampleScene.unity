@@ -605,6 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ee9c1d6a1934f48ae99707bc76eace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRange: 5
 --- !u!61 &912795715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1222,7 +1223,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8227275678056221143, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
+      propertyPath: _cam
+      value: 
+      objectReference: {fileID: 519420031}
+    m_RemovedComponents:
+    - {fileID: 6569114256628951876, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1348,7 +1354,7 @@ GameObject:
   - component: {fileID: 1988115326}
   - component: {fileID: 1988115330}
   - component: {fileID: 1988115329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1390,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
