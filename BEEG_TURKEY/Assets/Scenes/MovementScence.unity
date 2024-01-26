@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &125722084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5842506504398312186, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
+  m_PrefabInstance: {fileID: 1283277961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &438769026
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,19 +311,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5842506504398312186, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495677649}
   m_SourcePrefab: {fileID: 100100000, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
---- !u!114 &1495677645 stripped
+--- !u!114 &1495677649
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -8164404739453982909, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
-  m_PrefabInstance: {fileID: 1283277961}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 125722084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463e4058ad168db499497b378022568f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fd92239e0d9cae469ef00de96cb64dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  _cam: {fileID: 983343215}
+  AREA: {fileID: 0}
 --- !u!1 &1864377608
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1864377609
 Transform:
   m_ObjectHideFlags: 0
@@ -363,9 +375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd92239e0d9cae469ef00de96cb64dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1495677645}
   speed: 10
   _cam: {fileID: 983343215}
+  AREA: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -6,21 +6,19 @@ using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private Player player;
     [SerializeField] private float speed;
     [SerializeField] private Camera _cam;
     [SerializeField] private GameObject AREA;
+    private Rigidbody2D rigidbody;
     private float _camSizeX;
     private float _camSizeY;
 
-    private void Start()
+    private void Awake()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
         Debug.Log(_cam.orthographicSize);
         _camSizeY = _cam.orthographicSize - 0.5f;
         _camSizeX = _cam.orthographicSize + 3.38f;
-        player.playerName = "Jam";
-        player.playerSpeedX = speed;
-        player.playerSpeedY = speed;
     }
 
     private void checkArea(Vector3 playerPosition)
@@ -32,17 +30,20 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // ตรวจสอบการกดปุ่ม W A S D
-        float horizontalInput = Input.GetAxis("Horizontal");
+        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
+        rigidbody.velocity = playerInput;
+
+        /*float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         float xSpeed = horizontalInput * player.playerSpeedX * Time.deltaTime;
-        float ySpeed = verticalInput * player.playerSpeedY * Time.deltaTime;
+        float ySpeed = verticalInput * player.playerSpeedY * Time.deltaTime;*/
 
         // เคลื่อนที่ตามแกน X, Y และ Z
-        Vector3 movement = new Vector3(xSpeed, ySpeed, 0.0f);
-        player.transform.Translate(movement);
+        /*Vector3 movement = new Vector3(xSpeed, ySpeed, 0.0f);*/
+        //player.transform.Translate(movement);
 
-        Vector3 position = player.transform.position;
+        /*Vector3 position = player.transform.position;
         if (position.x < -(_camSizeX))
         {
             position.x = -(_camSizeX);
@@ -62,6 +63,6 @@ public class Movement : MonoBehaviour
         }
         player.transform.position = position;
 
-        checkArea(player.transform.position);
+        checkArea(player.transform.position);*/
     }
 }

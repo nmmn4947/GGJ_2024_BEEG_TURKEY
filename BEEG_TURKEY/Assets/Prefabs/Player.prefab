@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  playerSpeed: 0
+  playerSpeedX: 5
+  playerSpeedY: 5
