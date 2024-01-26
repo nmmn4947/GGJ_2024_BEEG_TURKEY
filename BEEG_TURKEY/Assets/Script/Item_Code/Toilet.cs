@@ -5,14 +5,16 @@ using UnityEngine;
 public class Toilet : Interactable
 {
     // Start is called before the first frame update
-    void Start()
+    public override void Awake()
     {
-        
+        base.Awake();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Interact()
     {
-        
+        Debug.Log("FLush Flush");
     }
+
+
 }
