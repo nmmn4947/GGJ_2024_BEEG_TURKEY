@@ -29,26 +29,11 @@ public class GameManager : MonoBehaviour
         {
             GameTimeToClock();
             gameTime = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
+        if(digitalClockTime[1] == 6)
+        {
+            Debug.Log("Game end");
+            Pause();
         }
     }
 
@@ -63,6 +48,7 @@ public class GameManager : MonoBehaviour
         else if(digitalClockTime[3] == 9)
         {
             digitalClockTime[2] += 1;
+            digitalClockTime[3] = 0;
         }
         else
         {
@@ -76,5 +62,10 @@ public class GameManager : MonoBehaviour
         text1.text = digitalClockTime[1].ToString();
         text2.text = digitalClockTime[2].ToString();
         text3.text = digitalClockTime[3].ToString();
+    }
+
+    void Pause()
+    {
+        Time.timeScale = 0;
     }
 }
