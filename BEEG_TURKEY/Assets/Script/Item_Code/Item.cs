@@ -13,7 +13,7 @@ public class Item : Interactable
     PickUpBaby pickupbaby;
     [SerializeField] private InteractWithObject _player;
     [SerializeField] private int item_ID;
-
+    Things thing;
     public override void Awake()
     {
         base.Awake();
@@ -22,6 +22,7 @@ public class Item : Interactable
         room = GetComponent<Room>();
         baby = GetComponent<Baby>();
         pickupbaby = GetComponent<PickUpBaby>();
+        thing = GetComponentInChildren<Things>();
     }
 
     public override void Interact()
@@ -45,6 +46,7 @@ public class Item : Interactable
                 if (_player.GetComponent<InteractWithObject>().putbackItem(item_ID))
                 {
                     Debug.Log("Item is match");
+                    thing.yes = true;
                 }
                 else
                 {
