@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float secondPerGameTime;
     [SerializeField] int maxChaosMeter;
     private float gameTime;
+    private bool isPause;
     [SerializeField]  private int[] digitalClockTime;
     // Start is called before the first frame update
     void Awake()
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
         digitalClockTime[2] = 0;
         digitalClockTime[3] = 0;
         ClockDisplay();
+        isPause = false;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
             GameTimeToClock();
             gameTime = 0;
         }
-        if(digitalClockTime[1] == 6)
+        if(digitalClockTime[1] == 6 && !isPause)
         {
             Debug.Log("Game end");
             Pause();
@@ -66,6 +68,16 @@ public class GameManager : MonoBehaviour
 
     void Pause()
     {
-        Time.timeScale = 0;
+        if(!isPause)
+        {
+            Time.timeScale = 0;
+            isPause = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            isPause = false;
+        }
+        
     }
 }
