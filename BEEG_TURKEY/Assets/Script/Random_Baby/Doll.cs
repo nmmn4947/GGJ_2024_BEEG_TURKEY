@@ -37,7 +37,6 @@ public class Doll : MonoBehaviour
                 kwo.Done = true;
                 WANT = false;
                 sadTimeKeep = sadTime;
-                Debug.Log("-Heart");
             }
         }
     }

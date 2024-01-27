@@ -884,17 +884,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629284593851531090, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: maxTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629284593851531090, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: minTime
-      value: 1
+    - target: {fileID: 1326551665056964637, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: m_Name
+      value: Audio_Source
       objectReference: {fileID: 0}
     - target: {fileID: 7798720688900702302, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_Name
