@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Toilet : Interactable
+public class Baby : Interactable
 {
     Placeable place;
     // Start is called before the first frame update
-    public override void Awake()
+    void Start()
     {
-
-        base.Awake();
         place = GetComponent<Placeable>();
     }
 
     // Update is called once per frame
-    public override void Interact()
+    void Update()
     {
         
+    }
+    public override void Interact()
+    {
         place.DisableSprite();
     }
-
-
 }
