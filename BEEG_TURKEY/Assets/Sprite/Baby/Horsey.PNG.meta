@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Horsey_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 501
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e9c99a38b667e48ab5331c76c2892d
+      internalID: -1934119788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horsey_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 0
+        width: 501
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6248587ac299acf49bebd8f9f185fc5c
+      internalID: 1616696984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horsey_2
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 0
+        width: 501
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd024b2c4694a1478cfaf5143f8bd10
+      internalID: -645443030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horsey_3
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 0
+        width: 501
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0649288949a99c548b7108a4fed82fe3
+      internalID: 1838001475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horsey_4
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 0
+        width: 501
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82efbc3920cb8604888d0c26fc8b004c
+      internalID: 1329109581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Horsey_0: -1934119788
+      Horsey_1: 1616696984
+      Horsey_2: -645443030
+      Horsey_3: 1838001475
+      Horsey_4: 1329109581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

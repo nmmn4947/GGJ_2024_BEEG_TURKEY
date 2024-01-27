@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: KID_sleeping_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 379
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ad7ff90c4301846a67658321d0d57d
+      internalID: -678830305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KID_sleeping_1
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 379
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c324223b54652a14bb0848dac2fe9a1c
+      internalID: 941215002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KID_sleeping_2
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 0
+        width: 379
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3a5ded3345a6241b84d21e0c02e250
+      internalID: 990783256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KID_sleeping_0: -678830305
+      KID_sleeping_1: 941215002
+      KID_sleeping_2: 990783256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: KID_crying(Loop) 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5901c8240f344a4c8ec0565d285fae4
+      internalID: 1414398067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KID_crying(Loop) 1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980bfd78fe9d31241aa5a6b9c2e7c0cd
+      internalID: 21214587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KID_crying(Loop) 1_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5b2ca992a5a8a4f8fc7a906fb176c8
+      internalID: -1317335179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KID_crying(Loop) 1_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9ed0eea478eef4ab3df996d9f4cd63
+      internalID: 1732427434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KID_crying(Loop) 1_0: 1414398067
+      KID_crying(Loop) 1_1: 21214587
+      KID_crying(Loop) 1_2: -1317335179
+      KID_crying(Loop) 1_3: 1732427434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
