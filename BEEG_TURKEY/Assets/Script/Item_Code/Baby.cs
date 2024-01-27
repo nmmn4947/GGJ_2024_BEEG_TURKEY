@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Baby : Interactable
 {
-    Placeable place;
-    // Start is called before the first frame update
-    void Start()
+    Placeable _place;
+    Room _room;
+
+    public int babyData;
+    //1 item
+    //2 room
+
+
+
+    private void Start()
     {
-        place = GetComponent<Placeable>();
+        _room = GetComponent<Room>();
+        _place = GetComponent<Placeable>();
+        //Start game set active both GameObject = false
+        babyData = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
     public override void Interact()
     {
-        place.DisableSprite();
+
     }
 }
