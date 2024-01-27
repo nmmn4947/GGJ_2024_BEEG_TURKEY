@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85683080fd1236545877248d58b00f75
+guid: cc04dd4402303394890bd41d74d21fa6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d881043b59eb82b428d7f30ddc1a8ec9
+      internalID: 1193890299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_1"
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a477ccf7a180aa44b0e82c6663c368a
+      internalID: 1587703777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_2"
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043d55dbe42af4c4f8b996bc34748a92
+      internalID: -652799706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_3"
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 337
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d8a9577c5926647a5dcc052a6ab423
+      internalID: 2142129504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_0": 1193890299
+      "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_1": 1587703777
+      "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_2": -652799706
+      "\u0E01\u0E38\u0E49\u0E07\u0E01\u0E34\u0E49\u0E07 down_3": 2142129504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
