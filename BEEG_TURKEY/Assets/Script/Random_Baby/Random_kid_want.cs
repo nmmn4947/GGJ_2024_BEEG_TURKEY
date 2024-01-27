@@ -12,6 +12,8 @@ public class Random_kid_want : MonoBehaviour
         shaker, //กุ้งกิ้ง
         doll,
         car,
+        milk,
+        pencil,
         toilet,
         horsey,
         bed
