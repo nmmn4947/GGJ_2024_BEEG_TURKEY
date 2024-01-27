@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Things : MonoBehaviour
@@ -9,6 +10,8 @@ public class Things : MonoBehaviour
     public float sadTime;
     public float sadTimeKeep;
     private float hapTimeKeep;
+    public bool yes = false;
+
 
     KidWant_Operate kwo;
     private void Start()
@@ -29,17 +32,18 @@ public class Things : MonoBehaviour
 
     protected void CountDown()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (yes)
         {
             hapTimeKeep -= Time.deltaTime;
             if (hapTimeKeep <= 0)
             {
                 kwo.Done = true;
                 WANT = false;
+                yes = false;
                 hapTimeKeep = happyTime;
             }
         }
-        else if (Input.GetKey(KeyCode.Q))
+        else
         {
             sadTimeKeep -= Time.deltaTime;
             if (sadTimeKeep <= 0)

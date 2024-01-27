@@ -6,6 +6,7 @@ public class InteractWithObject : MonoBehaviour
 {
     [SerializeField] private float interactRange;
     [SerializeField] public int _itemID;
+    public PickUpBaby holdingBaby;
     const int BABY_ID = 6;
     // Start is called before the first frame update
     void Awake()
@@ -30,7 +31,7 @@ public class InteractWithObject : MonoBehaviour
         // 1 - 5 = item 
         // 6 = baby
         // 0 = nothing in hand
-        Debug.Log("pickup" + item);
+        Debug.Log("pickup: " + item);
         if(item == BABY_ID)
         {
             _itemID = BABY_ID;

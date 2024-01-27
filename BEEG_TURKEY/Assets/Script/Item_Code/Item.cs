@@ -10,15 +10,19 @@ public class Item : Interactable
     Placeable place;
     Room room;
     Baby baby;
-    [SerializeField] private GameObject _player;
+    PickUpBaby pickupbaby;
+    [SerializeField] private InteractWithObject _player;
     [SerializeField] private int item_ID;
-
+    Things thing;
     public override void Awake()
     {
         base.Awake();
+        _player = FindAnyObjectByType<InteractWithObject>();
         place = GetComponent<Placeable>();
         room = GetComponent<Room>();
         baby = GetComponent<Baby>();
+        pickupbaby = GetComponent<PickUpBaby>();
+        thing = GetComponentInChildren<Things>();
     }
 
     public override void Interact()
@@ -42,6 +46,7 @@ public class Item : Interactable
                 if (_player.GetComponent<InteractWithObject>().putbackItem(item_ID))
                 {
                     Debug.Log("Item is match");
+                    thing.yes = true;
                 }
                 else
                 {
@@ -52,7 +57,9 @@ public class Item : Interactable
             {
                 Debug.Log("Want somewhere");
                 room.DisableSprite();
+                pickupbaby.isPickedUp = true;
                 _player.GetComponent<InteractWithObject>().pickupItem(item_ID);
+
             }
         }
     }

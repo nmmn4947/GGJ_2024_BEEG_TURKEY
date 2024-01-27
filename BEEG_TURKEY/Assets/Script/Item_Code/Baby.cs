@@ -27,10 +27,12 @@ public class Baby : Interactable
             _data.getWant() == Random_kid_want.KidWant.horsey ||
             _data.getWant() == Random_kid_want.KidWant.bed)
         {
+            babyData = (int)_data.getWant();
             return (int)_data.getWant();
         }
         else
         {
+            babyData = (int)_data.getWant();
             return (int)_data.getWant();
         }
     }

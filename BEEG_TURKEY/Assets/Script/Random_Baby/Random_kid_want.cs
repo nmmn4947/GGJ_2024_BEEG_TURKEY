@@ -22,7 +22,7 @@ public class Random_kid_want : MonoBehaviour
 
     public void RandWant()
     {
-        rand1 = Random.Range(1, 10);
+        rand1 = Random.Range(50, 60);
         if (rand1 <= 10)
         {
             _want = KidWant.shaker;
