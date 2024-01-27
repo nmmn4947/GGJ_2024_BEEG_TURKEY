@@ -12,11 +12,12 @@ public class Things : MonoBehaviour
     private float hapTimeKeep;
     public bool yes = false;
 
-
+    GameManager gameManager;
     KidWant_Operate kwo;
     private void Start()
     {
         kwo = GetComponentInParent<KidWant_Operate>();
+        gameManager = FindAnyObjectByType<GameManager>();
         sadTimeKeep = sadTime;
         hapTimeKeep = happyTime;
     }
@@ -34,6 +35,7 @@ public class Things : MonoBehaviour
     {
         if (yes)
         {
+            kwo.anim.SetBool("Crying", false);
             hapTimeKeep -= Time.deltaTime;
             if (hapTimeKeep <= 0)
             {
@@ -51,6 +53,7 @@ public class Things : MonoBehaviour
                 kwo.Done = true;
                 WANT = false;
                 sadTimeKeep = sadTime;
+                gameManager.maxChaosMeter -= 1;
             }
         }
     }

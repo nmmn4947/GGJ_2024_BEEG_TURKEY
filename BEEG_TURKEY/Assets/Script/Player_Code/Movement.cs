@@ -13,12 +13,14 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rigidbody;
     private AudioSource footStepAudioSource;
     private Animator animator;
+    InteractWithObject IWO;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         footStepAudioSource = GetComponentInChildren<AudioSource>();
+        IWO = GetComponent<InteractWithObject>();
     }
 
     void Update()
@@ -36,5 +38,26 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
         animator.SetFloat("Turn", Input.GetAxisRaw("Horizontal"));
         animator.SetFloat("Velocity", rigidbody.velocity.magnitude);
+
+        if (IWO._itemID == 1)
+        {
+            animator.SetBool("item1", true);
+        }
+        else if (IWO._itemID == 2)
+        {
+            animator.SetBool("item2", true);
+        }
+        else if (IWO._itemID == 3)
+        {
+            animator.SetBool("item3", true);
+        }
+        else if (IWO._itemID == 4)
+        {
+            animator.SetBool("item4", true);
+        }
+        else if (IWO._itemID == 5)
+        {
+            animator.SetBool("item5", true);
+        }
     }
 }

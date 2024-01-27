@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text text2;
     [SerializeField] TMP_Text text3;
     [SerializeField] float secondPerGameTime;
-    [SerializeField] int maxChaosMeter;
+    public int maxChaosMeter;
     private float gameTime;
     private bool isPause;
-    [SerializeField]  private int[] digitalClockTime;
+    [SerializeField] private int[] digitalClockTime;
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game end");
             Pause();
+        }
+        Debug.Log(maxChaosMeter);
+        if (maxChaosMeter <= 0)
+        {
+            Debug.Log("GameOver");
         }
     }
 
@@ -78,6 +83,5 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             isPause = false;
         }
-        
     }
 }

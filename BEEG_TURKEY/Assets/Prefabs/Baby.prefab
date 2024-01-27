@@ -505,6 +505,7 @@ MonoBehaviour:
   happyTime: 2
   sadTime: 2
   sadTimeKeep: 0
+  yes: 0
 --- !u!114 &1059180680080206882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +522,7 @@ MonoBehaviour:
   happyTime: 5
   sadTime: 2
   sadTimeKeep: 0
+  yes: 0
 --- !u!1 &6885598955407236869
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b8b588e35e47340a831432b08263bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 5842506504398312186, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
+  _player: {fileID: 6808530800509113493, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
   item_ID: 6
 --- !u!114 &2287136093516512507
 MonoBehaviour:
