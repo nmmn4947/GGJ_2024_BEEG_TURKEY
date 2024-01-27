@@ -23,7 +23,7 @@ public class KidTest : MonoBehaviour
         agent.updateUpAxis = false;
 
         // Start the movement when the script begins
-        //StartCoroutine(MoveWithRandomDelay());
+        StartCoroutine(MoveWithRandomDelay());
     }
 
     IEnumerator MoveWithRandomDelay()
@@ -72,12 +72,12 @@ public class KidTest : MonoBehaviour
     {
         if (rkw.getWant() == Random_kid_want.KidWant.nothing)
         {
-            //agent.isStopped = false;
-            //animator.SetFloat("Velocity", agent.velocity.magnitude);
+            agent.isStopped = false;
+            animator.SetFloat("Velocity", agent.velocity.magnitude);
         }
         else
         {
-            //agent.isStopped = true;
+            agent.isStopped = true;
         }
     }
 }
