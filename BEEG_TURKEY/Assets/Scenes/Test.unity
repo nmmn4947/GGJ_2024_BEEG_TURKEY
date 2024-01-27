@@ -270,6 +270,21 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &360107720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4587315319618096887, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &459763466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1872914529295874371, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &664873882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5896591093153393450, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &756990965
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +533,11 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &888856050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7414760370790215468, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1113892547
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,9 +905,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: bed
+      value: 
+      objectReference: {fileID: 2073889446}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 664873882}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: doll
+      value: 
+      objectReference: {fileID: 888856050}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: horsey
+      value: 
+      objectReference: {fileID: 360107720}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: shaker
       value: 
       objectReference: {fileID: 1880266621}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: toilet
+      value: 
+      objectReference: {fileID: 459763466}
     - target: {fileID: 7798720688900702302, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_Name
       value: Baby
@@ -1490,6 +1530,11 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &2073889446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7957110083188573499, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -55,12 +55,6 @@ public class Pop_up_want : MonoBehaviour
             case Random_kid_want.KidWant.bed:
                 bed.SetActive(true);
                 break;
-
-            case Random_kid_want.KidWant.carry:
-                carry.SetActive(true);
-                break;
-
-
         }
     }
 }
