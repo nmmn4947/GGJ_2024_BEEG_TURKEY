@@ -44,6 +44,7 @@ public class KidTest : MonoBehaviour
         Vector2 direction = (randomPosition - new Vector2(transform.position.x, transform.position.y)).normalized;
         animator.SetFloat("Forward", direction.y);
         animator.SetFloat("Turn", direction.x);
+        animator.SetFloat("Velocity", agent.velocity.magnitude);
 
         // Set the random position as the destination
         agent.SetDestination(randomPosition);
@@ -72,6 +73,7 @@ public class KidTest : MonoBehaviour
         if (rkw.getWant() == Random_kid_want.KidWant.nothing)
         {
             agent.isStopped = false;
+            animator.SetFloat("Velocity", agent.velocity.magnitude);
         }
         else
         {

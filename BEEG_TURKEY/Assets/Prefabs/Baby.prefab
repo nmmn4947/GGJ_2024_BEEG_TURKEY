@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985260281834744179}
   - component: {fileID: 4204334459442380246}
-  - component: {fileID: 1935384445858729066}
+  - component: {fileID: 3207112107633575894}
   m_Layer: 0
   m_Name: skin
   m_TagString: Untagged
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b803c9894baf3954eafb985b824074c3, type: 3}
+  m_Sprite: {fileID: 97747110, guid: 70294d17323992a41bccc30a880e70b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1935384445858729066
+--- !u!95 &3207112107633575894
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ Animator:
   m_GameObject: {fileID: 5980368678574707180}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e353878104826443bedbaced6b60654, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -440,8 +440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc37f5b7e657784fb8e9639050ec23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 3
-  maxTime: 5
+  minTime: 1
+  maxTime: 2
   Done: 0
 --- !u!114 &2985918249889755668
 MonoBehaviour:
