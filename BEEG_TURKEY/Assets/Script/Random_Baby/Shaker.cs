@@ -39,7 +39,6 @@ public class Shaker : MonoBehaviour
                     kwo.Done = true;
                     WANT = false;
                     sadTimeKeep = sadTime;
-                    Debug.Log("-Heart");
                 }
             }
 
