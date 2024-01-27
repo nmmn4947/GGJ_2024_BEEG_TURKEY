@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private GameObject AREA;
     private Rigidbody2D rigidbody;
     private AudioSource footStepAudioSource;
-    private Animator animator;
+    public Animator animator;
     InteractWithObject IWO;
 
     private void Awake()
@@ -39,7 +39,15 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Turn", Input.GetAxisRaw("Horizontal"));
         animator.SetFloat("Velocity", rigidbody.velocity.magnitude);
 
-        if (IWO._itemID == 1)
+        if (IWO._itemID == 0)
+        {
+            animator.SetBool("item1", false);
+            animator.SetBool("item2", false);
+            animator.SetBool("item3", false);
+            animator.SetBool("item4", false);
+            animator.SetBool("item5", false);
+        }
+        else if (IWO._itemID == 1)
         {
             animator.SetBool("item1", true);
         }
@@ -59,5 +67,6 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("item5", true);
         }
+
     }
 }
