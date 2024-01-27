@@ -5,6 +5,8 @@ using UnityEngine;
 public class InteractWithObject : MonoBehaviour
 {
     [SerializeField] private float interactRange;
+    [SerializeField] public int _itemID;
+    const int BABY_ID = 6;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,7 +25,39 @@ public class InteractWithObject : MonoBehaviour
         }
     }
 
+    public void pickupItem(int item)
+    {
+        // 1 - 5 = item 
+        // 6 = baby
+        // 0 = nothing in hand
+        Debug.Log("pickup" + item);
+        if(item == BABY_ID)
+        {
+            _itemID = BABY_ID;
+        }
+        else if(item > 0)
+        {
+            _itemID = item;
+        }
+        else
+        {
+            _itemID = 0;
+        }
+    }    
 
-    
+    public bool putbackItem(int item)
+    {
+        if (_itemID == item)
+        {
+            _itemID = 0;
+            return true;
+        }
+        return false;
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, interactRange);
+    }
 }

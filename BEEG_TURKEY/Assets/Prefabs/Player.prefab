@@ -244,7 +244,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3991858479818016202}
   - component: {fileID: -4464670643547327349}
-  - component: {fileID: -8164404739453982909}
   - component: {fileID: 8227275678056221143}
   - component: {fileID: 7419989335405060939}
   - component: {fileID: 6808530800509113493}
@@ -265,7 +264,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4202485914764369505}
@@ -299,21 +298,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-8164404739453982909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5842506504398312186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463e4058ad168db499497b378022568f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: 
-  playerSpeedX: 5
-  playerSpeedY: 5
 --- !u!114 &8227275678056221143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,3 +372,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactRange: 5
+  _itemID: 0
