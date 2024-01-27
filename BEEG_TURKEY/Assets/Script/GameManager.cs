@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     private bool isPause;
     [SerializeField] private int[] digitalClockTime;
     // Start is called before the first frame update
+
+    public GameObject objectToToggle;
+
     void Awake()
     {
         digitalClockTime[1] = 2;
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(maxChaosMeter);
         if (maxChaosMeter <= 0)
         {
-            Debug.Log("GameOver");
+            objectToToggle.SetActive(!objectToToggle.activeSelf);
         }
     }
 
