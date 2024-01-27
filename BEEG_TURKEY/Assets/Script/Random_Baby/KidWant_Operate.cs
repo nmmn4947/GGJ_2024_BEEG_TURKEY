@@ -10,6 +10,7 @@ public class KidWant_Operate : MonoBehaviour
     Random_kid_want rkw;
 
     Shaker shaker;
+    Doll doll;
 
     private float time;
 
@@ -18,6 +19,7 @@ public class KidWant_Operate : MonoBehaviour
     {
         rkw = GetComponent<Random_kid_want>();
         shaker = GetComponentInChildren<Shaker>();
+        doll = GetComponentInChildren<Doll>();
 
         time = rkw.getRandTime(minTime, maxTime);
         
@@ -33,10 +35,10 @@ public class KidWant_Operate : MonoBehaviour
                 switch (rkw.getWant())
                 {
                     case Random_kid_want.KidWant.shaker:
-                        //shaker.WANT = true;
+                        shaker.WANT = true;
                         break;
                     case Random_kid_want.KidWant.doll:
-                        //require
+                        doll.WANT = true;
                         break;
                     case Random_kid_want.KidWant.car:
                         //require

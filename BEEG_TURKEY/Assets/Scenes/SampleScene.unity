@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e093d5627bc088e4a9865b7c88b001a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  babyData: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6885598955407236869, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_IsActive

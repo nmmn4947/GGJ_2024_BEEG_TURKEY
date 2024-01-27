@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: shaker
+      value: 
+      objectReference: {fileID: 1880266621}
     - target: {fileID: 7798720688900702302, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_Name
       value: Baby
@@ -1187,6 +1191,11 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1880266621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7167532514147104559, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905677158
 GameObject:
   m_ObjectHideFlags: 0
