@@ -30,7 +30,7 @@ public class InteractWithObject : MonoBehaviour
         // 1 - 5 = item 
         // 6 = baby
         // 0 = nothing in hand
-        Debug.Log("pickup" + item);
+        Debug.Log("pickup: " + item);
         if(item == BABY_ID)
         {
             _itemID = BABY_ID;

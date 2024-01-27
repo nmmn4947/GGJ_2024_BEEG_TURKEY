@@ -171,53 +171,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: bed
+    - target: {fileID: 1422040490964303929, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: _player
       value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: car
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: doll
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: carry
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: horsey
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: shaker
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 633805106657013467, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: toilet
-      value: 
-      objectReference: {fileID: 542792935}
-    - target: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885598955407236869, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167532514147104559, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1514376863}
     - target: {fileID: 7798720688900702302, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_Name
       value: Baby (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8733472070185129160, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -483,7 +443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336939937
 Transform:
   m_ObjectHideFlags: 0
@@ -855,11 +815,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &542792935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7167532514147104559, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
-  m_PrefabInstance: {fileID: 187963709}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &605344463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd7d1d203e9d642bfb622016a05254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source_ID: 2
+  source_ID: 1
   player: {fileID: 1514376863}
 --- !u!212 &1461604157
 SpriteRenderer:
