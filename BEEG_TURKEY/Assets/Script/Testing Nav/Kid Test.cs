@@ -9,11 +9,13 @@ public class KidTest : MonoBehaviour
     [SerializeField] float minDelay = 1f;
     [SerializeField] float maxDelay = 3f;
     NavMeshAgent agent;
+    Animator animator;
 
     Random_kid_want rkw;
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         rkw = GetComponent<Random_kid_want>();
 
         agent = GetComponent<NavMeshAgent>();
@@ -38,6 +40,10 @@ public class KidTest : MonoBehaviour
     {
         // Generate a random point within the navmesh bounds
         Vector2 randomPosition = RandomNavmeshPosition();
+
+        Vector2 direction = (randomPosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+        animator.SetFloat("Forward", direction.y);
+        animator.SetFloat("Turn", direction.x);
 
         // Set the random position as the destination
         agent.SetDestination(randomPosition);
