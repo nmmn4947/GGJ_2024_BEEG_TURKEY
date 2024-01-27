@@ -51,9 +51,6 @@ public class KidWant_Operate : MonoBehaviour
                     case Random_kid_want.KidWant.bed:
                         //require
                         break;
-                    case Random_kid_want.KidWant.carry:
-                        //require
-                        break;
                 }
             }
             else
