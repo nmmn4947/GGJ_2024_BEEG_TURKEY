@@ -27,7 +27,6 @@ public class KidWant_Operate : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(rkw.getWant());
         if (rkw.getWant() == Random_kid_want.KidWant.nothing){
             if (time <= 0)
             {
@@ -66,7 +65,6 @@ public class KidWant_Operate : MonoBehaviour
         {
             if (Done)
             {
-                Debug.Log("Done");
                 rkw.setWant(Random_kid_want.KidWant.nothing);
                 time = rkw.getRandTime(minTime, maxTime);
                 Done = false;
