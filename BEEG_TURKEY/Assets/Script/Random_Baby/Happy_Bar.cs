@@ -10,14 +10,12 @@ public class Happy_Bar : MonoBehaviour
     float sad;
     float initialScaleX;
 
-    // Start is called before the first frame update
     void Start()
     {
         shaker = wants.GetComponent<Shaker>();
         initialScaleX = transform.localScale.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
         sad = Mathf.Clamp01((shaker.sadTime - shaker.sadTimeKeep) / shaker.sadTime);
