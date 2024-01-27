@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractWithObject : MonoBehaviour
 {
+    [SerializeField] private Sprite[] imageIcons;
+    [SerializeField] private Image imageUI;
     [SerializeField] private float interactRange;
     [SerializeField] public int _itemID;
     public PickUpBaby holdingBaby;
@@ -44,6 +47,8 @@ public class InteractWithObject : MonoBehaviour
         {
             _itemID = 0;
         }
+        imageUI.sprite = imageIcons[_itemID];
+        
     }    
 
     public bool putbackItem(int item)
@@ -51,6 +56,7 @@ public class InteractWithObject : MonoBehaviour
         if (_itemID == item)
         {
             _itemID = 0;
+            imageUI.sprite = imageIcons[0];
             return true;
         }
         return false;
