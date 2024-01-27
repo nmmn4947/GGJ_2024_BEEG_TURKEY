@@ -10,8 +10,12 @@ public class KidTest : MonoBehaviour
     [SerializeField] float maxDelay = 3f;
     NavMeshAgent agent;
 
+    Random_kid_want rkw;
+
     void Start()
     {
+        rkw = GetComponent<Random_kid_want>();
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -22,10 +26,11 @@ public class KidTest : MonoBehaviour
 
     IEnumerator MoveWithRandomDelay()
     {
+        
         while (true)
         {
-            MoveToRandomPosition();
-            yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
+           MoveToRandomPosition();
+           yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
         }
     }
 
@@ -54,5 +59,17 @@ public class KidTest : MonoBehaviour
         }
 
         return randomPosition;
+    }
+
+    private void Update()
+    {
+        if (rkw.getWant() == Random_kid_want.KidWant.nothing)
+        {
+            agent.isStopped = false;
+        }
+        else
+        {
+            agent.isStopped = true;
+        }
     }
 }

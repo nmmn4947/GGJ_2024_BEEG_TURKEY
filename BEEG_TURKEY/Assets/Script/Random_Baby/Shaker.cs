@@ -6,8 +6,8 @@ public class Shaker : MonoBehaviour
 {
     public bool WANT = false;
     [SerializeField] private float happyTime;
-    [SerializeField] private float sadTime;
-    private float sadTimeKeep;
+    public float sadTime;
+    public float sadTimeKeep;
     private float hapTimeKeep;
 
     KidWant_Operate kwo;
@@ -22,7 +22,7 @@ public class Shaker : MonoBehaviour
         if (WANT)
         {
 
-            //if baby got da shaker
+            if (Input.GetKey(KeyCode.E)) {
                 hapTimeKeep -= Time.deltaTime;
                 if (hapTimeKeep <= 0)
                 {
@@ -30,12 +30,19 @@ public class Shaker : MonoBehaviour
                     WANT = false;
                     hapTimeKeep = happyTime;
                 }
-            //else baby don't get da shaker
-            sadTimeKeep -= Time.deltaTime;
-            if (sadTimeKeep <= 0)
-            {
-                //minus heart oof
             }
+            else if(Input.GetKey(KeyCode.Q))
+            {
+                sadTimeKeep -= Time.deltaTime;
+                if (sadTimeKeep <= 0)
+                {
+                    kwo.Done = true;
+                    WANT = false;
+                    sadTimeKeep = sadTime;
+                    Debug.Log("-Heart");
+                }
+            }
+
         }
 
 

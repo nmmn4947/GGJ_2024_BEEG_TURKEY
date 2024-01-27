@@ -34,7 +34,10 @@ public class Doll : MonoBehaviour
             sadTimeKeep -= Time.deltaTime;
             if (sadTimeKeep <= 0)
             {
-                //minus heart oof
+                kwo.Done = true;
+                WANT = false;
+                sadTimeKeep = sadTime;
+                Debug.Log("-Heart");
             }
         }
     }

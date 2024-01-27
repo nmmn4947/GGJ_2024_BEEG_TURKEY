@@ -24,8 +24,8 @@ public class Random_kid_want : MonoBehaviour
 
     public void RandWant()
     {
-        rand1 = Random.Range(1, 100);
-        rand2 = Random.Range(1, 90);
+        rand1 = Random.Range(1, 40);
+        rand2 = Random.Range(1, 30);
         if (rand1 <= 40)
         {
             if(rand2 <= 30)
