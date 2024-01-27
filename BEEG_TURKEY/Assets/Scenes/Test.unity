@@ -818,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6808530800509113493, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
+      propertyPath: interactRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7877917917986093837, guid: 758befcf19e32dc46b800ec7d30de143, type: 3}
       propertyPath: m_SortingOrder
       value: 2

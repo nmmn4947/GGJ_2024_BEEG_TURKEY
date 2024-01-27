@@ -27,8 +27,8 @@ public class Item : Interactable
 
     public override void Interact()
     {
-        int[] someThing = Enumerable.Range(1, 4).ToArray();
-        int[] someWhere = Enumerable.Range(4, 6).ToArray();
+        int[] someThing = Enumerable.Range(1, 5).ToArray();
+        int[] someWhere = Enumerable.Range(5, 8).ToArray();
         if (baby == null)
         {
             Debug.Log("This is Item");
