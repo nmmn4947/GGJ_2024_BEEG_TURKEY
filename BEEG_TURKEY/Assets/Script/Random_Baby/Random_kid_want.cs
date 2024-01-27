@@ -14,38 +14,50 @@ public class Random_kid_want : MonoBehaviour
         car,
         toilet,
         horsey,
-        bed
+        bed,
+        carry
     }
-    int rand;
+    int rand1;
+    int rand2;
 
     public KidWant _want;
 
     public void RandWant()
     {
-        rand = Random.Range(1, 60);
-        if (rand <= 10)
+        rand1 = Random.Range(1, 40);
+        rand2 = Random.Range(1, 30);
+        if (rand1 <= 40)
         {
-            _want = KidWant.shaker;
+            if(rand2 <= 30)
+            {
+                _want = KidWant.shaker;
+            }else if (rand2 <= 60)
+            {
+                _want = KidWant.doll;
+            }
+            else
+            {
+                _want = KidWant.car;
+            }
         }
-        else if(rand <= 20)
+        else if(rand1 <= 80)
         {
-            _want = KidWant.doll;
-        }
-        else if (rand <= 30)
-        {
-            _want = KidWant.car;
-        }
-        else if (rand <= 40)
-        {
-            _want = KidWant.toilet;
-        }
-        else if (rand <= 50)
-        {
-            _want = KidWant.horsey;
+            if (rand2 <= 30)
+            {
+                _want = KidWant.toilet;
+            }
+            else if (rand2 <= 60)
+            {
+                _want = KidWant.horsey;
+            }
+            else
+            {
+                _want = KidWant.bed;
+            }
         }
         else
         {
-            _want = KidWant.bed;
+            _want = KidWant.carry;
         }
     }
 
