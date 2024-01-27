@@ -280,6 +280,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1872914529295874371, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
   m_PrefabInstance: {fileID: 1598966914}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &499197038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+  m_PrefabInstance: {fileID: 1598966914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499197042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499197038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad92ef6c58f0674889ace0bd82a3077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WANT: 0
+  happyTime: 5
+  sadTime: 5
+  sadTimeKeep: 0
 --- !u!1 &664873882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5896591093153393450, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
@@ -928,14 +949,41 @@ PrefabInstance:
       propertyPath: toilet
       value: 
       objectReference: {fileID: 459763466}
+    - target: {fileID: 1059180680080206882, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: sadTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059180680080206882, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: happyTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221472960653078077, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: sadTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221472960653078077, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: happyTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7798720688900702302, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: m_Name
       value: Baby
       objectReference: {fileID: 0}
+    - target: {fileID: 8733472070185129160, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6771800534749931154, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499197042}
   m_SourcePrefab: {fileID: 100100000, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
 --- !u!1 &1632329557
 GameObject:
