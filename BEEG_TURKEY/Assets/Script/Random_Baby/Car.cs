@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Doll : MonoBehaviour
+public class Car : MonoBehaviour
 {
     public bool WANT = false;
     [SerializeField] private float happyTime;
