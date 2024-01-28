@@ -5,7 +5,7 @@ using UnityEngine;
 public class Baby_Sounds : MonoBehaviour
 {
     public AudioSource source;
-    public AudioClip walk;
+    public AudioClip laugh2;
     public AudioClip cry;
     public AudioClip laugh;
     public AudioClip happy;
@@ -15,9 +15,9 @@ public class Baby_Sounds : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    public void PlayWalk()
+    public void PlayLaugh2()
     {
-        source.PlayOneShot(walk);
+        source.PlayOneShot(laugh2);
     }
 
     public void PlayCry()

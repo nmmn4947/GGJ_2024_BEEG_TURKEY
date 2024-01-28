@@ -11,15 +11,19 @@ public class Things : MonoBehaviour
     public float sadTimeKeep;
     private float hapTimeKeep;
     public bool yes = false;
+    bool once = false;
 
     GameManager gameManager;
     KidWant_Operate kwo;
     Animator animator;
+    Baby_Sounds sound;
+
+    
     private void Start()
     {
         kwo = GetComponentInParent<KidWant_Operate>();
         gameManager = FindAnyObjectByType<GameManager>();
-        
+        sound = GetComponentInParent<Baby_Sounds>();
         sadTimeKeep = sadTime;
         hapTimeKeep = happyTime;
     }
@@ -32,7 +36,7 @@ public class Things : MonoBehaviour
             
         }
     }
-
+    int rand;
     protected void CountDown()
     {
         
@@ -40,6 +44,27 @@ public class Things : MonoBehaviour
         {
             Debug.Log("Yessing");
             kwo.anim.SetBool("Crying", false);
+            rand = Random.Range(1, 3);
+            if(once == false)
+            {
+                if(rand == 1)
+                {
+                    sound.PlayLaugh();
+                }
+                else if (rand == 2)
+                {
+                    sound.PlayLaugh2();
+                    Debug.Log("2");
+                }
+                else
+                {
+                    sound.PlayHappy();
+                    Debug.Log("Happy");
+                }
+                
+                once = true;
+            }
+            
             hapTimeKeep -= Time.deltaTime;
             if (hapTimeKeep <= 0)
             {
@@ -48,6 +73,7 @@ public class Things : MonoBehaviour
                 WANT = false;
                 yes = false;
                 hapTimeKeep = happyTime;
+                once = false;
             }
         }
         else
