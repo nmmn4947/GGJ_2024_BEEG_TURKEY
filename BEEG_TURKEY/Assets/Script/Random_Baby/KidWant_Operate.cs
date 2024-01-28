@@ -94,6 +94,7 @@ public class KidWant_Operate : MonoBehaviour
                 rkw.setWant(Random_kid_want.KidWant.nothing);
                 time = rkw.getRandTime(minTime, maxTime);
                 Done = false;
+                once = false;
             }
         }
 
