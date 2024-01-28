@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
             GameTimeToClock();
             gameTime = 0;
         }
-        if(digitalClockTime[1] == 60 && !isPause)
+        if(digitalClockTime[1] >= 6 && !isPause)
         {
             Debug.Log("Game end");
             Pause();
