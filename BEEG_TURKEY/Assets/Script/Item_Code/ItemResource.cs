@@ -7,6 +7,8 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class ItemResource : Interactable
 {
     Room room;
+    [SerializeField] AudioClip pickUpSound;
+    AudioSource audioSource;
     [SerializeField] private int source_ID;
     [SerializeField] private InteractWithObject player;
 
@@ -14,6 +16,7 @@ public class ItemResource : Interactable
     {
         base.Awake();
         room = GetComponent<Room>();
+        audioSource = GetComponent<AudioSource>();
         player = FindAnyObjectByType<InteractWithObject>();
     }
 
@@ -25,6 +28,7 @@ public class ItemResource : Interactable
         Debug.Log(source_ID);
         if(itemFromPlayer == 0)
         {
+            audioSource.PlayOneShot(pickUpSound);
             player.pickupItem(source_ID);
         }
         else if (itemFromPlayer == source_ID)

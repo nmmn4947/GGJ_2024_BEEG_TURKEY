@@ -1098,6 +1098,10 @@ PrefabInstance:
       propertyPath: source_ID
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1579064875551403732, guid: 99d663476fcc03b49b0059fcefcf7fe2, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d6a758be0577ed45bc27ed3ee2b094a, type: 3}
     - target: {fileID: 4435792355073123683, guid: 99d663476fcc03b49b0059fcefcf7fe2, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -4023,7 +4027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7629284593851531090, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: maxTime
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7629284593851531090, guid: 3efe206fa5493a747b056ce44e8cbaf0, type: 3}
       propertyPath: minTime
