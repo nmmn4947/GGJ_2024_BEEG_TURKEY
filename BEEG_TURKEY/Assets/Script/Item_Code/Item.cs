@@ -27,8 +27,8 @@ public class Item : Interactable
 
     public override void Interact()
     {
-        int[] someThing = Enumerable.Range(1, 5).ToArray();
-        int[] someWhere = Enumerable.Range(5, 8).ToArray();
+        int[] someThing = Enumerable.Range(1, 4).ToArray();
+        int[] someWhere = Enumerable.Range(4, 6).ToArray();
         if (baby == null)
         {
             Debug.Log("This is Item");
@@ -40,6 +40,7 @@ public class Item : Interactable
             Debug.Log("This is baby");
             item_ID = baby.getType();
             Debug.Log(item_ID);
+            
             if (someThing.Contains<int>(item_ID))
             {
                 Debug.Log("Want something");
@@ -51,6 +52,8 @@ public class Item : Interactable
                 else
                 {
                     Debug.Log("Item is not match");
+
+                    thing.yes = false;
                 }
             }
             else if (someWhere.Contains<int>(item_ID))
@@ -59,7 +62,10 @@ public class Item : Interactable
                 room.DisableSprite();
                 pickupbaby.isPickedUp = true;
                 _player.GetComponent<InteractWithObject>().pickupItem(item_ID);
-
+            }
+            else
+            {
+                Debug.Log("Bruh");
             }
         }
     }

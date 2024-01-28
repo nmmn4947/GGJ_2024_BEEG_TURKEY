@@ -10,7 +10,7 @@ public class KidTest : MonoBehaviour
     [SerializeField] float maxDelay = 3f;
     NavMeshAgent agent;
     Animator animator;
-
+    Baby_Sounds sound;
     Random_kid_want rkw;
 
     void Start()
@@ -21,7 +21,7 @@ public class KidTest : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
+        sound = GetComponent<Baby_Sounds>();
         // Start the movement when the script begins
         StartCoroutine(MoveWithRandomDelay());
     }

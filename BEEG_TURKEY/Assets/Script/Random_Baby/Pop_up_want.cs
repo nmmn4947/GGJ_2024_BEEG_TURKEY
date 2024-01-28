@@ -11,7 +11,6 @@ public class Pop_up_want : MonoBehaviour
     public GameObject toilet;
     public GameObject horsey;
     public GameObject bed;
-    public GameObject carry;
 
     private void Start()
     {
@@ -29,7 +28,6 @@ public class Pop_up_want : MonoBehaviour
                 toilet.SetActive(false);
                 horsey.SetActive(false);
                 bed.SetActive(false);
-                carry.SetActive(false);
                 break;
 
             case Random_kid_want.KidWant.shaker:

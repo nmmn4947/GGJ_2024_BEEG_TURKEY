@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+
 using UnityEngine;
 
 public class Things : MonoBehaviour
@@ -27,18 +27,21 @@ public class Things : MonoBehaviour
         {
 
             CountDown();
-
+            
         }
     }
 
     protected void CountDown()
     {
+        
         if (yes)
         {
+            Debug.Log("Yessing");
             kwo.anim.SetBool("Crying", false);
             hapTimeKeep -= Time.deltaTime;
             if (hapTimeKeep <= 0)
             {
+                
                 kwo.Done = true;
                 WANT = false;
                 yes = false;

@@ -10,25 +10,28 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Camera _cam;
     [SerializeField] private GameObject AREA;
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rigid;
     private AudioSource footStepAudioSource;
     public Animator animator;
     InteractWithObject IWO;
+    
 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigid = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         footStepAudioSource = GetComponentInChildren<AudioSource>();
         IWO = GetComponent<InteractWithObject>();
+        
     }
 
     void Update()
     {
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        rigidbody.velocity = playerInput.normalized * speed;
-        if(rigidbody.velocity.magnitude > 0.2f)
+        rigid.velocity = playerInput.normalized * speed;
+        if(rigid.velocity.magnitude > 0.2f)
         {
+
             footStepAudioSource.enabled = true;
         }
         else
@@ -37,7 +40,7 @@ public class Movement : MonoBehaviour
         }
         animator.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
         animator.SetFloat("Turn", Input.GetAxisRaw("Horizontal"));
-        animator.SetFloat("Velocity", rigidbody.velocity.magnitude);
+        animator.SetFloat("Velocity", rigid.velocity.magnitude);
 
         if (IWO._itemID == 0)
         {

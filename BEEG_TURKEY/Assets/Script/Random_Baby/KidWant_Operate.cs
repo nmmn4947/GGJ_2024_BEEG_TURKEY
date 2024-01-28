@@ -9,9 +9,10 @@ public class KidWant_Operate : MonoBehaviour
     [SerializeField] private float maxTime;
     Random_kid_want rkw;
     public Animator anim;
-
+    Baby_Sounds sound;
     Shaker shaker;
     Doll doll;
+    Car car;
 
     private float time;
 
@@ -21,11 +22,15 @@ public class KidWant_Operate : MonoBehaviour
         rkw = GetComponent<Random_kid_want>();
         shaker = GetComponentInChildren<Shaker>();
         doll = GetComponentInChildren<Doll>();
+        car = GetComponentInChildren<Car>();
+
         anim = GetComponentInChildren<Animator>();
         time = rkw.getRandTime(minTime, maxTime);
+        sound = GetComponent<Baby_Sounds>();
         
-    }
 
+    }
+    bool once = false;
     private void Update()
     {
         if (rkw.getWant() == Random_kid_want.KidWant.nothing){
@@ -34,6 +39,12 @@ public class KidWant_Operate : MonoBehaviour
                 rkw.RandWant();
                 anim.SetBool("Crying", true);
                 anim.Play("Baby_StartCrying");
+                if (once == false)
+                {
+                    //sound.PlayCry();
+                    once = true;
+                }
+                
                 switch (rkw.getWant())
                 {
                     case Random_kid_want.KidWant.shaker:
@@ -45,20 +56,28 @@ public class KidWant_Operate : MonoBehaviour
                         
                         break;
                     case Random_kid_want.KidWant.car:
+                        car.WANT = true;
+
+                        break;
+                    case Random_kid_want.KidWant.milk:
                         
-                        //require
+
+                        break;
+                    case Random_kid_want.KidWant.pencil:
+                        
+
                         break;
                     case Random_kid_want.KidWant.toilet:
                         
-                        //require
+
                         break;
                     case Random_kid_want.KidWant.horsey:
                         
-                        //require
+
                         break;
                     case Random_kid_want.KidWant.bed:
                         
-                        //require
+
                         break;
                 }
             }

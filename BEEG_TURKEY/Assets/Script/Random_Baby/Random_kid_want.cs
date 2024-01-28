@@ -18,14 +18,14 @@ public class Random_kid_want : MonoBehaviour
         horsey,
         bed,
         station
-    }
+    };
     int rand1;
 
     public KidWant _want;
 
     public void RandWant()
     {
-        rand1 = Random.Range(30, 40);
+        rand1 = Random.Range(1, 30);
         if (rand1 <= 10)
         {
             _want = KidWant.shaker;
