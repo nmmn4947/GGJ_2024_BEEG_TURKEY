@@ -41,7 +41,7 @@ public class KidWant_Operate : MonoBehaviour
                 anim.Play("Baby_StartCrying");
                 if (once == false)
                 {
-                    //sound.PlayCry();
+                    sound.PlayCry();
                     once = true;
                 }
                 
