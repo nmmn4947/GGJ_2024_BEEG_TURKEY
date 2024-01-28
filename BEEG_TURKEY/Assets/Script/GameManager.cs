@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     private float gameTime;
     private bool isPause;
     [SerializeField] private int[] digitalClockTime;
+    [SerializeField] private Image[] babyCrying;
+    [SerializeField] private Sprite babyCryingTick;
     // Start is called before the first frame update
 
     public GameObject objectToToggle;
@@ -24,6 +27,7 @@ public class GameManager : MonoBehaviour
         digitalClockTime[3] = 0;
         ClockDisplay();
         isPause = false;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -41,10 +45,16 @@ public class GameManager : MonoBehaviour
             Pause();
         }
         Debug.Log(maxChaosMeter);
-        if (maxChaosMeter <= 0)
+        if (maxChaosMeter <= 0 && !isPause)
         {
-            objectToToggle.SetActive(!objectToToggle.activeSelf);
+            objectToToggle.SetActive(true);
+            Pause();
         }
+
+        UpdateBabyCryingUI();
+
+
+
     }
 
     void GameTimeToClock()
@@ -65,6 +75,22 @@ public class GameManager : MonoBehaviour
             digitalClockTime[3] += 1;
         }
         ClockDisplay();
+    }
+
+    void UpdateBabyCryingUI()
+    {
+        if(maxChaosMeter == 2)
+        {
+            babyCrying[2].sprite = babyCryingTick;
+        }
+        else if(maxChaosMeter == 1)
+        {
+            babyCrying[1].sprite = babyCryingTick;
+        }
+        else if (maxChaosMeter == 0)
+        {
+            babyCrying[0].sprite = babyCryingTick;
+        }
     }
 
     void ClockDisplay()
