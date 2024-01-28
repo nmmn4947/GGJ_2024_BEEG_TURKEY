@@ -13,7 +13,11 @@ public class Item : Interactable
     PickUpBaby pickupbaby;
     [SerializeField] private InteractWithObject _player;
     [SerializeField] private int item_ID;
-    Things thing;
+    Shaker shaker;
+    Doll doll;
+    Car car;
+
+
     public override void Awake()
     {
         base.Awake();
@@ -22,7 +26,10 @@ public class Item : Interactable
         room = GetComponent<Room>();
         baby = GetComponent<Baby>();
         pickupbaby = GetComponent<PickUpBaby>();
-        thing = GetComponentInChildren<Things>();
+        shaker = GetComponentInChildren<Shaker>();
+        doll = GetComponentInChildren<Doll>();
+        car = GetComponentInChildren<Car>();
+
     }
 
     public override void Interact()
@@ -47,13 +54,24 @@ public class Item : Interactable
                 if (_player.GetComponent<InteractWithObject>().putbackItem(item_ID))
                 {
                     Debug.Log("Item is match");
-                    thing.yes = true;
+                    if (item_ID == 1)
+                    {
+                        shaker.yes = true;
+                    }
+                    else if (item_ID == 2)
+                    {
+                        doll.yes = true;
+                    }
+                    else if (item_ID == 3)
+                    {
+                        car.yes = true;
+                    }
                 }
                 else
                 {
                     Debug.Log("Item is not match");
 
-                    thing.yes = false;
+                    
                 }
             }
             else if (someWhere.Contains(item_ID))
