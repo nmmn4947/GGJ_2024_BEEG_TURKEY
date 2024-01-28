@@ -14,10 +14,12 @@ public class Things : MonoBehaviour
 
     GameManager gameManager;
     KidWant_Operate kwo;
+    Animator animator;
     private void Start()
     {
         kwo = GetComponentInParent<KidWant_Operate>();
         gameManager = FindAnyObjectByType<GameManager>();
+        
         sadTimeKeep = sadTime;
         hapTimeKeep = happyTime;
     }
@@ -53,8 +55,8 @@ public class Things : MonoBehaviour
             sadTimeKeep -= Time.deltaTime;
             if (sadTimeKeep <= 0)
             {
-                kwo.Done = true;
                 WANT = false;
+                kwo.anim.Play("CRYSOHARD");
                 sadTimeKeep = sadTime;
                 gameManager.maxChaosMeter -= 1;
             }
