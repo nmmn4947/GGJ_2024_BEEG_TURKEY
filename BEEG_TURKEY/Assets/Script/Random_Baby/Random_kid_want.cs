@@ -25,7 +25,7 @@ public class Random_kid_want : MonoBehaviour
 
     public void RandWant()
     {
-        rand1 = Random.Range(1, 30);
+        rand1 = Random.Range(1, 50);
         if (rand1 <= 10)
         {
             _want = KidWant.shaker;
@@ -40,9 +40,17 @@ public class Random_kid_want : MonoBehaviour
         }
         else if (rand1 <= 40)
         {
-            _want = KidWant.toilet;
+            _want = KidWant.milk;
         }
         else if (rand1 <= 50)
+        {
+            _want = KidWant.pencil;
+        }
+        else if (rand1 <= 60)
+        {
+            _want = KidWant.toilet;
+        }
+        else if (rand1 <= 70)
         {
             _want = KidWant.horsey;
         }
@@ -50,6 +58,7 @@ public class Random_kid_want : MonoBehaviour
         {
             _want = KidWant.bed;
         }
+        
     }
 
     public KidWant getWant() { return _want; }

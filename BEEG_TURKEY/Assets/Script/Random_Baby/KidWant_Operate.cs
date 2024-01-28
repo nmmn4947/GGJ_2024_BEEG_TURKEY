@@ -13,6 +13,8 @@ public class KidWant_Operate : MonoBehaviour
     Shaker shaker;
     Doll doll;
     Car car;
+    Milk milk;
+    Pencil pencil;
 
     private float time;
 
@@ -23,6 +25,8 @@ public class KidWant_Operate : MonoBehaviour
         shaker = GetComponentInChildren<Shaker>();
         doll = GetComponentInChildren<Doll>();
         car = GetComponentInChildren<Car>();
+        milk = GetComponentInChildren<Milk>();
+        pencil = GetComponentInChildren<Pencil>();
 
         anim = GetComponentInChildren<Animator>();
         time = rkw.getRandTime(minTime, maxTime);
@@ -60,11 +64,11 @@ public class KidWant_Operate : MonoBehaviour
 
                         break;
                     case Random_kid_want.KidWant.milk:
-                        
+                        milk.WANT = true;
 
                         break;
                     case Random_kid_want.KidWant.pencil:
-                        
+                        pencil.WANT = true;
 
                         break;
                     case Random_kid_want.KidWant.toilet:
@@ -98,6 +102,6 @@ public class KidWant_Operate : MonoBehaviour
                 once = false;
             }
         }
-
+        Debug.Log(rkw.getWant());
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,8 @@ public class Baby : Interactable
     {
         if (_data.getWant() == Random_kid_want.KidWant.toilet || 
             _data.getWant() == Random_kid_want.KidWant.horsey ||
-            _data.getWant() == Random_kid_want.KidWant.bed)
+            _data.getWant() == Random_kid_want.KidWant.bed ||
+            _data.getWant() == Random_kid_want.KidWant.station)
         {
             babyData = (int)_data.getWant();
             return (int)_data.getWant();

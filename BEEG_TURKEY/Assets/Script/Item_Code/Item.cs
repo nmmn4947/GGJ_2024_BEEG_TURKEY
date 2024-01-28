@@ -16,6 +16,8 @@ public class Item : Interactable
     Shaker shaker;
     Doll doll;
     Car car;
+    Milk milk;
+    Pencil pencil;
 
 
     public override void Awake()
@@ -29,13 +31,15 @@ public class Item : Interactable
         shaker = GetComponentInChildren<Shaker>();
         doll = GetComponentInChildren<Doll>();
         car = GetComponentInChildren<Car>();
+        milk = GetComponentInChildren<Milk>();
+        pencil = GetComponentInChildren<Pencil>();
 
     }
 
     public override void Interact()
     {
-        int[] someThing = Enumerable.Range(1, 4).ToArray();
-        int[] someWhere = Enumerable.Range(4, 6).ToArray();
+        int[] someThing = Enumerable.Range(1, 5).ToArray();
+        int[] someWhere = Enumerable.Range(5, 9).ToArray();
         if (baby == null)
         {
             Debug.Log("This is Item");
@@ -65,6 +69,14 @@ public class Item : Interactable
                     else if (item_ID == 3)
                     {
                         car.yes = true;
+                    }
+                    else if (item_ID == 4)
+                    {
+                        milk.yes = true;
+                    }
+                    else if (item_ID == 5)
+                    {
+                        pencil.yes = true;
                     }
                 }
                 else
