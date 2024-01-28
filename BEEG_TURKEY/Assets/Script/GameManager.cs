@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameTime += Time.deltaTime;
+        //gameTime += Time.deltaTime;
         if (gameTime >= secondPerGameTime)
         {
             GameTimeToClock();

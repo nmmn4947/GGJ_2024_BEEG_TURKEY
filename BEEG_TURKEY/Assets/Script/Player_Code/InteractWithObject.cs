@@ -47,7 +47,7 @@ public class InteractWithObject : MonoBehaviour
         {
             _itemID = 0;
         }
-        imageUI.sprite = imageIcons[_itemID];
+        //imageUI.sprite = imageIcons[_itemID];
         
     }    
 
@@ -56,7 +56,7 @@ public class InteractWithObject : MonoBehaviour
         if (_itemID == item)
         {
             _itemID = 0;
-            imageUI.sprite = imageIcons[0];
+            //imageUI.sprite = imageIcons[0];
             return true;
         }
         return false;

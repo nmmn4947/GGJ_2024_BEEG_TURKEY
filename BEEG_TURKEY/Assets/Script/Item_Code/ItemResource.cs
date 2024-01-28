@@ -35,9 +35,9 @@ public class ItemResource : Interactable
         {
             Debug.Log("Item put back the soure item.");
             player.putbackItem(itemFromPlayer);
-            if(itemFromPlayer == 6)
+            if(itemFromPlayer == 8)
             {
-                
+                Debug.Log("wow");
             }
         }
         else
