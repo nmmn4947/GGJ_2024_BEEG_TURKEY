@@ -16,7 +16,7 @@ public class Happy_Bar : MonoBehaviour
     void Start()
     {
         rkw = GetComponentInParent<Random_kid_want>();
-
+        
         shaker = wants.GetComponent<Shaker>();
         doll = wants.GetComponent<Doll>();
         car = wants.GetComponent<Car>();
