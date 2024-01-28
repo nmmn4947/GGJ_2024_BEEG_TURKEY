@@ -19,7 +19,6 @@ public class Placeable : MonoBehaviour
 
     public void DisableSprite()
     {
-        Debug.Log(sprite);
         sprite.enabled = false;
     }
 

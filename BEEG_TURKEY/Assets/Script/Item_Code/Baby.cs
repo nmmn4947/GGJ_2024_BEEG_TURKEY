@@ -36,11 +36,4 @@ public class Baby : Interactable
             return (int)_data.getWant();
         }
     }
-
-    public void DisableSrite()
-    {
-        _place.DisableSprite();
-        //this.gameObject.SetActive(false);
-
-    }
 }

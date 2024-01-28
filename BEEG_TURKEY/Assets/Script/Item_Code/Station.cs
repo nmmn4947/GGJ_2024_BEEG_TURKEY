@@ -6,13 +6,11 @@ public class Station : Interactable
 {
     [SerializeField] private int station_ID;
     [SerializeField] private InteractWithObject player;
-    [SerializeField] private Baby baby;
-    public bool isBabyputback = false;
+    private Baby baby;
     // Start is called before the first frame update
     void Awake()
     {
         player = FindAnyObjectByType<InteractWithObject>();
-        baby = FindAnyObjectByType<Baby>();
     }
 
     // Update is called once per frame
@@ -27,21 +25,11 @@ public class Station : Interactable
         Debug.Log(itemFromPlayer);
         Debug.Log("------------");
         Debug.Log(station_ID);
-        if (itemFromPlayer == station_ID)
+        baby = player.holdingBaby.GetComponent<Baby>();
+        if (itemFromPlayer == 6 && station_ID == baby.getType())
         {
-            Debug.Log("Putback baby matched");
-            baby.GetComponent<PickUpBaby>().isPickedUp = false;
-            isBabyputback = true;
-            if (isBabyputback)
-            {
-                Debug.Log("Station have baby");
-                baby.DisableSrite();
-            }
-            else
-            {
-                Debug.Log("Station not have baby");
-            }
-            //player.holdingBaby.isPickedUp = false;
+            Debug.Log("Type matched");
+            player.holdingBaby.isPickedUp = false;
         }
     }
 }

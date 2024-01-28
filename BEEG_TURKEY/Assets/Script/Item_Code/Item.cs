@@ -77,7 +77,7 @@ public class Item : Interactable
             else if (someWhere.Contains(item_ID))
             {
                 Debug.Log("Want somewhere");
-                //room.DisableSprite();
+                room.DisableSprite();
                 pickupbaby.isPickedUp = true;
                 _player.GetComponent<InteractWithObject>().pickupItem(item_ID);
             }
