@@ -41,7 +41,7 @@ public class Item : Interactable
             item_ID = baby.getType();
             Debug.Log(item_ID);
             
-            if (someThing.Contains<int>(item_ID))
+            if (someThing.Contains(item_ID))
             {
                 Debug.Log("Want something");
                 if (_player.GetComponent<InteractWithObject>().putbackItem(item_ID))
@@ -56,7 +56,7 @@ public class Item : Interactable
                     thing.yes = false;
                 }
             }
-            else if (someWhere.Contains<int>(item_ID))
+            else if (someWhere.Contains(item_ID))
             {
                 Debug.Log("Want somewhere");
                 room.DisableSprite();

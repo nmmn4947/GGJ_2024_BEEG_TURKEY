@@ -8,27 +8,37 @@ public class Happy_Bar : MonoBehaviour
     Shaker shaker;
     Doll doll;
     Random_kid_want rkw;
+    Car car;
 
     float sad;
     float initialScaleX;
 
     void Start()
     {
-        rkw = Random_kid_want.;
+        rkw = GetComponentInParent<Random_kid_want>();
 
         shaker = wants.GetComponent<Shaker>();
         doll = wants.GetComponent<Doll>();
+        car = wants.GetComponent<Car>();
         initialScaleX = transform.localScale.x;
     }
 
     void Update()
     {
-        if ()
+        if (rkw.getWant() == Random_kid_want.KidWant.shaker)
         {
-
+            sad = Mathf.Clamp01((shaker.sadTime - shaker.sadTimeKeep) / shaker.sadTime);
+        }
+        else if (rkw.getWant() == Random_kid_want.KidWant.doll)
+        {
+            sad = Mathf.Clamp01((doll.sadTime - doll.sadTimeKeep) / doll.sadTime);
+        }
+        else if (rkw.getWant() == Random_kid_want.KidWant.car)
+        {
+            sad = Mathf.Clamp01((car.sadTime - car.sadTimeKeep) / car.sadTime);
         }
 
-        sad = Mathf.Clamp01((shaker.sadTime - shaker.sadTimeKeep) / shaker.sadTime);
+        
 
         // Calculate the new scale value for X-axis (width)
         float newScaleX = initialScaleX * sad;
