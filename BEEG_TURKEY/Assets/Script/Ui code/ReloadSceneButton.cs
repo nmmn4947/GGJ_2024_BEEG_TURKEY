@@ -18,11 +18,8 @@ public class ReloadSceneButton : MonoBehaviour
     {
         // Get the index of the current scene
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        GameManager gm = FindAnyObjectByType<GameManager>();
-        gm.Restart();
+
         // Reload the current scene by loading it again
         SceneManager.LoadScene(currentSceneIndex);
-        
-        
     }
 }

@@ -6,7 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject UI;
     [SerializeField] TMP_Text text1;
     [SerializeField] TMP_Text text2;
     [SerializeField] TMP_Text text3;
@@ -23,23 +22,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(UI);
-        //DontDestroyOnLoad(this.gameObject);
-        maxChaosMeter = 3;
         digitalClockTime[1] = 2;
         digitalClockTime[2] = 0;
         digitalClockTime[3] = 0;
-        gameTime = 0;
         ClockDisplay();
         isPause = false;
-        Time.timeScale = 1;
-    }
-    private void Start()
-    {
-        maxChaosMeter = 3;
-        digitalClockTime[1] = 2;
-        digitalClockTime[2] = 0;
-        digitalClockTime[3] = 0;
         Time.timeScale = 1;
     }
 
@@ -68,18 +55,6 @@ public class GameManager : MonoBehaviour
 
 
 
-    }
-
-    public void Restart()
-    {
-        maxChaosMeter = 3;
-        digitalClockTime[1] = 2;
-        digitalClockTime[2] = 0;
-        digitalClockTime[3] = 0;
-        gameTime = 0;
-        ClockDisplay();
-        isPause = false;
-        Time.timeScale = 1;
     }
 
     void GameTimeToClock()
@@ -138,5 +113,4 @@ public class GameManager : MonoBehaviour
             isPause = false;
         }
     }
-
 }
